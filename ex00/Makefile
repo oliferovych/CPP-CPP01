@@ -6,7 +6,7 @@
 #    By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/09 18:37:45 by dolifero          #+#    #+#              #
-#    Updated: 2024/09/09 18:40:21 by dolifero         ###   ########.fr        #
+#    Updated: 2024/09/09 22:41:16 by dolifero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ CC			= c++
 CFLAGS		= -Wall -Wextra -Werror
 RM			= rm -f
 
-SRC_FILES	= main.cpp
-OBJ_FILES	= main.o
+SRC_FILES	= newZombie.cpp Zombie.cpp randomChump.cpp main.cpp
+OBJ_FILES	= newZombie.o Zombie.o randomChump.o main.o
 
 all:		$(NAME)
 

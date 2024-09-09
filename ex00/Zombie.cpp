@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:46:43 by dolifero          #+#    #+#             */
-/*   Updated: 2024/09/09 19:08:10 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/09/09 22:45:50 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ void	Zombie::setName(const std::string &name)
 
 void	Zombie::announce(void)
 {
-	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-Zombie::Zombie() : name("")
+Zombie::Zombie() : name("Unnamed Zombie")
 {
 }
 
 Zombie::~Zombie()
 {
-	std::cout << name << ": Destroyyyeeeddd..." << std::endl;
+	std::cout << getName() << ": Destroyyyeeeddd..." << std::endl;
 }
