@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 18:37:23 by dolifero          #+#    #+#             */
-/*   Updated: 2024/09/09 23:41:35 by dolifero         ###   ########.fr       */
+/*   Created: 2024/09/08 21:23:31 by dolifero          #+#    #+#             */
+/*   Updated: 2024/09/08 22:00:26 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int	main(void)
+#include <iostream>
+
+class Harl
 {
-	Zombie stackZomb;
-	Zombie *heapZomb = newZombie("Heap zombie");
+	private:
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
 
-	stackZomb.setName("Stack zombie");
-	stackZomb.announce();
-	heapZomb->announce();
-	randomChump("Temp Zombie");
-	delete heapZomb;
-}
+	public:
+		Harl();
+		~Harl();
+		void complain( std::string level );
+};
+
+#endif
