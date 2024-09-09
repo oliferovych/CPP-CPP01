@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 18:37:23 by dolifero          #+#    #+#             */
-/*   Updated: 2024/09/09 22:57:09 by dolifero         ###   ########.fr       */
+/*   Created: 2024/09/09 18:40:37 by dolifero          #+#    #+#             */
+/*   Updated: 2024/09/09 23:02:10 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-int	main(void)
+#include <iostream>
+
+class Zombie
 {
-	Zombie stackZomb;
-	Zombie *heapZomb = newZombie("Heap zombie");
+	private:
+		std::string name;
 
-	stackZomb.setName("Stack zombie");
-	stackZomb.announce();
-	heapZomb->announce();
-	randomChump("Temp Zombie");
-	delete heapZomb;
-}
+	public:
+		Zombie();
+		~Zombie();
+		std::string getName() const;
+		void setName(const std::string &name);
+		void announce( void );
+};
+
+Zombie* zombieHorde( int N, std::string name );
+
+#endif
