@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 16:14:31 by dolifero          #+#    #+#             */
-/*   Updated: 2024/09/10 17:02:02 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/09/10 17:06:27 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ void	HumanB::attack(void)
 	}
 	else
 	{
-		std::cout << name << " does not have a weapon!" << std::endl;
+		std::cout << name << " does not have a weapon to attack with" << std::endl;
 	}
 }
